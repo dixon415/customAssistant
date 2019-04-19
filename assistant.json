@@ -1,0 +1,63 @@
+{
+  "id" : "proj_Mx1Oq7dzX4E",
+  "name" : "customAssistant",
+  "intents" : [ {
+    "id" : "dixon415:setIntensity",
+    "type" : "registry",
+    "version" : "0.3.0",
+    "language" : "en",
+    "slots" : [ {
+      "name" : "intensity",
+      "id" : "nF_8AAfJA",
+      "entityId" : "snips/percentage",
+      "missingQuestion" : "",
+      "required" : false
+    } ],
+    "name" : "setIntensity",
+    "enabledByDefault" : true
+  }, {
+    "id" : "dixon415:turnOffLights",
+    "type" : "registry",
+    "version" : "0.2.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "turnOffLights",
+    "enabledByDefault" : true
+  }, {
+    "id" : "dixon415:turnLightsOn",
+    "type" : "registry",
+    "version" : "0.2.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "turnLightsOn",
+    "enabledByDefault" : true
+  }, {
+    "id" : "dixon415:setColor",
+    "type" : "registry",
+    "version" : "0.2.0",
+    "language" : "en",
+    "slots" : [ {
+      "name" : "color",
+      "id" : "pIqV5P-g5",
+      "entityId" : "entity_kA2d2EKO9bN",
+      "missingQuestion" : "",
+      "required" : false
+    } ],
+    "name" : "setColor",
+    "enabledByDefault" : true
+  } ],
+  "createdAt" : "2019-04-19T03:36:08.419Z",
+  "language" : "en",
+  "version" : {
+    "nluModel" : "0.19.0"
+  },
+  "platform" : {
+    "type" : "raspberrypi"
+  },
+  "asr" : {
+    "type" : "snips"
+  },
+  "analyticsEnabled" : true,
+  "heartbeatEnabled" : true,
+  "hotword" : "hey_snips"
+}

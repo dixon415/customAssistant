@@ -1,0 +1,45 @@
+{
+  "config": {
+    "ignore_stop_words": true,
+    "max_pattern_length": 1000,
+    "max_queries": 500,
+    "unit_name": "deterministic_intent_parser"
+  },
+  "group_names_to_slot_names": {
+    "group0": "color",
+    "group1": "intensity"
+  },
+  "language_code": "en",
+  "patterns": {
+    "dixon415:setColor": [
+      "^\\s*make\\s*lights\\s*(?P<group0>%COLOR%)\\s*$",
+      "^\\s*turn\\s*lights\\s*(?P<group0>%COLOR%)\\s*$",
+      "^\\s*change\\s*lights\\s*(?P<group0>%COLOR%)\\s*$"
+    ],
+    "dixon415:setIntensity": [
+      "^\\s*decrease\\s*lights\\s*(?P<group1>%SNIPSPERCENTAGE%)\\s*$",
+      "^\\s*put\\s*lights\\s*(?P<group1>%SNIPSPERCENTAGE%)\\s*$",
+      "^\\s*set\\s*light\\s*(?P<group1>%SNIPSPERCENTAGE%)\\s*$"
+    ],
+    "dixon415:turnLightsOn": [
+      "^\\s*it\\s*s\\s*dark\\s*here\\s*$",
+      "^\\s*let\\s*there\\s*be\\s*light\\s*$",
+      "^\\s*lights\\s*on\\s*$",
+      "^\\s*turn\\s*on\\s*lights\\s*$"
+    ],
+    "dixon415:turnOffLights": [
+      "^\\s*switch\\s*off\\s*lights\\s*$",
+      "^\\s*turn\\s*lights\\s*off\\s*$"
+    ]
+  },
+  "slot_names_to_entities": {
+    "dixon415:setColor": {
+      "color": "color"
+    },
+    "dixon415:setIntensity": {
+      "intensity": "snips/percentage"
+    },
+    "dixon415:turnLightsOn": {},
+    "dixon415:turnOffLights": {}
+  }
+}

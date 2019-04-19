@@ -1,0 +1,16 @@
+{
+    "color": {
+        "vanilla": "b7c616b0-2b94-414a-9095-f4d3d54bd7f0.vanilla", 
+        "ngram": true, 
+        "added": "b7c616b0-2b94-414a-9095-f4d3d54bd7f0.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }, 
+    "snips/percentage": {
+        "vanilla": "f38ae31a-904f-4311-bb75-8efae8fb6865.vanilla", 
+        "ngram": false, 
+        "added": "f38ae31a-904f-4311-bb75-8efae8fb6865.added", 
+        "pruningThresholds": [], 
+        "order": 0
+    }
+}

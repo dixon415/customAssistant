@@ -1,0 +1,229 @@
+{
+    "entityNameToFilename": {
+        "color": "e_0.snips", 
+        "snips/percentage": "e_1.snips"
+    }, 
+    "intentNameToDisambigs": {
+        "dixon415:setColor": {
+            "start": "`INTENT`c19dcdb5-c7dd-4539-9599-a15502150a1d`START", 
+            "end": "`INTENT`c19dcdb5-c7dd-4539-9599-a15502150a1d`END"
+        }, 
+        "dixon415:turnOffLights": {
+            "start": "`INTENT`b9057ec9-003d-474a-8ede-92078241fa17`START", 
+            "end": "`INTENT`b9057ec9-003d-474a-8ede-92078241fa17`END"
+        }, 
+        "dixon415:setIntensity": {
+            "start": "`INTENT`af607d21-e78c-448a-85fc-9106785f3de5`START", 
+            "end": "`INTENT`af607d21-e78c-448a-85fc-9106785f3de5`END"
+        }, 
+        "dixon415:turnLightsOn": {
+            "start": "`INTENT`af3a078d-71be-44c1-925b-c3a3f1bf3eb2`START", 
+            "end": "`INTENT`af3a078d-71be-44c1-925b-c3a3f1bf3eb2`END"
+        }, 
+        "3f57e971-0814-4f34-87aa-bac67164edb1": {
+            "start": "`INTENT`3f57e971-0814-4f34-87aa-bac67164edb1`START", 
+            "end": "`INTENT`3f57e971-0814-4f34-87aa-bac67164edb1`END"
+        }
+    }, 
+    "injectionsEngine": {
+        "version": 2
+    }, 
+    "language": "en", 
+    "decoderConfig": {
+        "useFinalProbs": true, 
+        "latticeBeamSize": 4.0, 
+        "mbrConfig": {
+            "confidenceAdditionnalExponent": 1.0, 
+            "unkProba": 0.5, 
+            "unkThreshold": 0.3
+        }, 
+        "maxActive": 2500, 
+        "minActive": 200, 
+        "acousticScale": 0.83, 
+        "beamSize": 12.0
+    }, 
+    "cacheSizeDynamic": 536870912, 
+    "asrModel": {
+        "version": "0.1.0"
+    }, 
+    "asrLmAdaptation": {
+        "version": "0.19.7"
+    }, 
+    "endpointingRules": {
+        "rule3": {
+            "maxRelativeCost": 8.0, 
+            "minTrailingSilence": 1.0, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": true
+        }, 
+        "rule2": {
+            "maxRelativeCost": 5.5, 
+            "minTrailingSilence": 0.7, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": true
+        }, 
+        "rule1": {
+            "maxRelativeCost": 10000000000.0, 
+            "minTrailingSilence": 4.0, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": false
+        }, 
+        "rule5": {
+            "maxRelativeCost": 10000000000.0, 
+            "minTrailingSilence": 0.0, 
+            "minUtteranceLength": 10.0, 
+            "mustContainNonsilence": false
+        }, 
+        "rule4": {
+            "maxRelativeCost": 2.5, 
+            "minTrailingSilence": 0.5, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": true
+        }
+    }, 
+    "postprocessors": [
+        {
+            "Regex": {
+                "pattern": "`INTENT`c19dcdb5-c7dd-4539-9599-a15502150a1d`START (.*?) `INTENT`c19dcdb5-c7dd-4539-9599-a15502150a1d`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`c19dcdb5-c7dd-4539-9599-a15502150a1d`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`b9057ec9-003d-474a-8ede-92078241fa17`START (.*?) `INTENT`b9057ec9-003d-474a-8ede-92078241fa17`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`b9057ec9-003d-474a-8ede-92078241fa17`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`af607d21-e78c-448a-85fc-9106785f3de5`START (.*?) `INTENT`af607d21-e78c-448a-85fc-9106785f3de5`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`af607d21-e78c-448a-85fc-9106785f3de5`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`af3a078d-71be-44c1-925b-c3a3f1bf3eb2`START (.*?) `INTENT`af3a078d-71be-44c1-925b-c3a3f1bf3eb2`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`af3a078d-71be-44c1-925b-c3a3f1bf3eb2`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`3f57e971-0814-4f34-87aa-bac67164edb1`START (.*?) `INTENT`3f57e971-0814-4f34-87aa-bac67164edb1`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`3f57e971-0814-4f34-87aa-bac67164edb1`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`ENTITY`b7c616b0-2b94-414a-9095-f4d3d54bd7f0`START (.*?) `ENTITY`b7c616b0-2b94-414a-9095-f4d3d54bd7f0`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`ENTITY`b7c616b0-2b94-414a-9095-f4d3d54bd7f0`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`START (.*?) `ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`START .[^`]*? `ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`BYPASSING `ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`END", 
+                "flags": "i", 
+                "replacement": "unknownword"
+            }
+        }
+    ], 
+    "asrEngine": {
+        "version": "0.1.0"
+    }, 
+    "entitiesFstMap": [
+        [
+            267, 
+            "__root__"
+        ], 
+        [
+            268, 
+            "e_0.snips"
+        ], 
+        [
+            269, 
+            "e_1.snips"
+        ]
+    ], 
+    "entityNameToDisambigs": {
+        "color": {
+            "start": "`ENTITY`b7c616b0-2b94-414a-9095-f4d3d54bd7f0`START", 
+            "end": "`ENTITY`b7c616b0-2b94-414a-9095-f4d3d54bd7f0`END", 
+            "empty": [
+                "", 
+                4
+            ]
+        }, 
+        "snips/percentage": {
+            "start": "`ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`START", 
+            "end": "`ENTITY`f38ae31a-904f-4311-bb75-8efae8fb6865`END", 
+            "empty": [
+                "", 
+                4
+            ]
+        }
+    }, 
+    "inferenceEngine": {
+        "version": 2
+    }
+}
